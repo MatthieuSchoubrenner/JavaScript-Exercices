@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Matthieu Schoubrenner">
   <link rel="stylesheet" href="../CSS/formulaire.css">
-  <title>Formulaire</title>
+  <title>Formulaire d'inscription | Exercice</title>
 </head>
+
 <body>
-  
+  <header>
+    <h1>Inscription</h1>
+  </header>
+
+  <form>
+    <label for="nom">Nom</label>
+    <div id="nom2"></div>
+    <div>
+      <img src="../IMG/icône utilisateur.png" width="20" height="20">
+      <input id="nom" type="text" required="" placeholder="Votre nom">
+    </div>
+    <hr>
+    <br>
+    <label for="prenom">Prénom</label>
+    <div id="prenom2"></div>
+    <div>
+      <img src="../IMG/icône utilisateur.png" width="20" height="20">
+      <input id="prenom" type="text" required="" placeholder="Votre prénom">
+    </div>
+    <hr>
+    <br>
+    <label for="datedenaissance">Date de naissance</label>
+    <div id="datedenaissance2"></div>
+    <div>
+      <img src="../IMG/icône utilisateur.png" width="20" height="20">
+      <input id="datedenaissance" type="date" required="" placeholder="Votre date de naissance">
+    </div>
+    <hr>
+    <br>
+    <label for="lieudenaissance">Lieu de naissance</label>
+    <div id="lieudenaissance2"></div>
+    <div>
+      <img src="../IMG/icône utilisateur.png" width="20" height="20">
+      <input id="lieudenaissance" type="text" required="" placeholder="Votre lieu de naissance">
+    </div>
+    <hr>
+    <br>
+    <label for="signeastrologique">Signe astrologique</label>
+    <div id="signeastrologique2"></div>
+    <div>
+      <img src="../IMG/icône utilisateur.png" width="20" height="20">
+      <select id="signeastrologique" name="signeastrologique">
+        <option label="Bélier"></option>
+        <option label="Taureau"></option>
+        <option label="Gémeaux"></option>
+        <option label="Cancer"></option>
+        <option label="Lion"></option>
+        <option label="Vierge"></option>
+        <option label="Balance"></option>
+        <option label="Scorpion"></option>
+        <option label="Sagittaire"></option>
+        <option label="Capricorne"></option>
+        <option label="Verseau"></option>
+        <option label="Poissons"></option>
+      </select>
+    </div>
+    <hr>
+    <br>
+    <label for="email">Email</label>
+    <div id="email2"></div>
+    <div>
+      <img src="../IMG/icône utilisateur.png" width="20" height="20">
+      <input id="email" type="text" required="" placeholder="Votre email">
+    </div>
+    <hr>
+    <br>
+    <label for="motdepasse">Mot de passe</label>
+    <div id="motdepasse2"></div>
+    <div>
+      <img src="../IMG/icône utilisateur.png" width="20" height="20">
+      <input id="motdepasse" type="text" required="" placeholder="Votre mot de passe">
+    </div>
+    <hr>
+    <br>
+    <label for="confirmationmotdepasse">Confirmation mot de passe</label>
+    <div id="confirmationmotdepasse2"></div>
+    <div>
+      <img src="../IMG/icône utilisateur.png" width="20" height="20">
+      <input id="confirmationmotdepasse" type="text" required="" placeholder="Confirmez votre mot de passe">
+    </div>
+    <hr>
+    <br>
+    <label for="presentation">Présentation en quelques mots</label>
+    <div id="presentation2"></div>
+    <textarea name="presentation" id="presentation3" cols="40" rows="6"></textarea>
+    <br>
+    <br>
+    <div id="bouton">
+      <button>Inscription</button>
+    </div>
+  </form>
+
+  <footer>Matthieu Schoubrenner | 2021</footer>
 </body>
+
 </html>
