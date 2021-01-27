@@ -1,4 +1,4 @@
-function caisse() 
+function rendumonnaie() 
 {
   var nb1 = document.getElementById('aRegler').value;
   var nb2 = document.getElementById('sommeRecu').value;
