@@ -3,108 +3,106 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Matthieu Schoubrenner">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../CSS/formulaire.css">
-  <title>Formulaire d'inscription | Exercice</title>
+  <title>Exercice Formulaire</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-  <header>
+
+  <div class="cardautre" style="width: 30rem; border-radius: 20px;">
+    <br><br>
+
     <h1>Inscription</h1>
-  </header>
+    <form action="test.html" name="form" onsubmit="return validateForm()" method="POST">
+      <div class="form-group">
+        <label for="nom">Nom</label><br>
+        <span id="errorname" style="color:red"></span>
+        <input type="text" id="nom" name="nom" class="form-control" placeholder="&#128100; Votre nom">
+      </div>
 
-  <form>
-    <label for="nom">Nom</label>
-    <div id="nom2"></div>
-    <div>
-      <img src="../IMG/icône utilisateur.png" width="20" height="20">
-      <input id="nom" type="text" required="" placeholder="Votre nom">
-    </div>
-    <hr>
-    <br>
-    <label for="prenom">Prénom</label>
-    <div id="prenom2"></div>
-    <div>
-      <img src="../IMG/icône utilisateur.png" width="20" height="20">
-      <input id="prenom" type="text" required="" placeholder="Votre prénom">
-    </div>
-    <hr>
-    <br>
-    <label for="datedenaissance">Date de naissance</label>
-    <div id="datedenaissance2"></div>
-    <div>
-      <img src="../IMG/icône utilisateur.png" width="20" height="20">
-      <input id="datedenaissance" type="date" required="" placeholder="Votre date de naissance">
-    </div>
-    <hr>
-    <br>
-    <label for="lieudenaissance">Lieu de naissance</label>
-    <div id="lieudenaissance2"></div>
-    <div>
-      <img src="../IMG/icône utilisateur.png" width="20" height="20">
-      <input id="lieudenaissance" type="text" required="" placeholder="Votre lieu de naissance">
-    </div>
-    <hr>
-    <br>
-    <label for="signeastrologique">Signe astrologique</label>
-    <div id="signeastrologique2"></div>
-    <div>
-      <img src="../IMG/icône utilisateur.png" width="20" height="20">
-      <select id="signeastrologique" name="signeastrologique">
-        <option label="Bélier"></option>
-        <option label="Taureau"></option>
-        <option label="Gémeaux"></option>
-        <option label="Cancer"></option>
-        <option label="Lion"></option>
-        <option label="Vierge"></option>
-        <option label="Balance"></option>
-        <option label="Scorpion"></option>
-        <option label="Sagittaire"></option>
-        <option label="Capricorne"></option>
-        <option label="Verseau"></option>
-        <option label="Poissons"></option>
-      </select>
-    </div>
-    <hr>
-    <br>
-    <label for="email">Email</label>
-    <div id="email2"></div>
-    <div>
-      <img src="../IMG/icône utilisateur.png" width="20" height="20">
-      <input id="email" type="text" required="" placeholder="Votre email">
-    </div>
-    <hr>
-    <br>
-    <label for="motdepasse">Mot de passe</label>
-    <div id="motdepasse2"></div>
-    <div>
-      <img src="../IMG/icône cadenas.jpg" width="25" height="25">
-      <input id="motdepasse" type="text" required="" placeholder="Votre mot de passe">
-    </div>
-    <hr>
-    <br>
-    <label for="confirmationmotdepasse">Confirmation mot de passe</label>
-    <div id="confirmationmotdepasse2"></div>
-    <div>
-      <img src="../IMG/icône cadenas.jpg" width="25" height="25">
-      <input id="confirmationmotdepasse" type="text" required="" placeholder="Confirmez votre mot de passe">
-    </div>
-    <hr>
-    <br>
-    <label for="presentation">Présentation en quelques mots</label>
-    <div id="presentation2"></div>
-    <textarea name="presentation" id="presentation3" cols="40" rows="6"></textarea>
-    <br>
-    <hr>
-    <div id="bouton">
-      <button>INSCRIPTION</button>
-    </div>
-  </form>
+      <div class="form-group">
+        <label for="prenom">Prénom</label><br>
+        <span id="errorfirstname" style="color:red"></span>
+        <input type="text" id="prenom" name="prenom" class="form-control" placeholder="&#128100; Votre prénom">
+      </div>
 
-  <footer>Matthieu Schoubrenner | 2021</footer>
+      <div class="form-group">
+        <label for="dateNaissance">Date de naissance</label><br>
+        <span id="errordate" style="color:red"></span>
+        <input type="text" name="dateNaissance" id="dateNaissance" class="form-control"
+          placeholder="&#128100; Votre date de naissance">
+      </div>
+
+      <div class="form-group">
+        <label for="lieuNaissance">Lieu de naissance</label><br>
+        <span id="errorlieu" style="color:red"></span>
+        <input type="text" id="lieuNaissance" name="lieuNaissance" class="form-control"
+          placeholder="&#128100; Votre lieu de naissance">
+      </div>
+
+      <div class="form-group">
+        <label for="signeAstro">Signe astrologique</label>
+        <br><span id="errorsigne" style="color:red"></span>
+        <select id="signeAstro" name="signeAstro" class="form-control">
+          <option value="">&#128100 Votre signe astrologique</option>
+          <option value="belier">Belier</option>
+          <option value="taureau">Taureau</option>
+          <option value="gemeaux">Gémeaux</option>
+          <option value="cancer">Cancer</option>
+          <option value="lion">Lion</option>
+          <option value="vierge">Vierge</option>
+          <option value="balance">Balance</option>
+          <option value="scorpion">Scorpion</option>
+          <option value="sagittaire">Sagittaire</option>
+          <option value="capricorne">Capricorne</option>
+          <option value="verseau">Verseau</option>
+          <option value="poissons">Poissons</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label><br>
+        <span id="erroremail" style="color:red"></span>
+        <input type="text" id="email" name="email" class="form-control" placeholder="&#128100; Votre email">
+      </div>
+
+      <div class="form-group">
+        <label for="mdp">Mot de passe</label><br>
+        <span id="errormdp" style="color:red"></span>
+        <input type="text" name="mdp" id="mdp" class="form-control" placeholder="&#x1F512; Votre mot de passe">
+      </div>
+
+      <div class="form-group">
+        <label for="repetermdp">Confirmez le mot de passe</label><br>
+        <span id="errormdpp" style="color:red"></span>
+        <input type="text" name="mdpp" id="mdpp" class="form-control" placeholder="&#x1F512; Votre mot de passe">
+      </div>
+
+      <div class="form-group">
+        <label for="presentation">Présentation en quelques mots</label><br>
+        <span id="errorpresentation" style="color:red"></span>
+        <textarea class="form-control" onkeyup="KeyPress();" id="presentation" name="presentation" rows="7"></textarea>
+        <div id="compteur" style="color:red; text-align:right;">0 Caractère(s)/15 maximum</div>
+      </div>
+
+      <button type="submit" class="submit">INSCRIPTION</button>
+    </form>
+    <br><br><br>
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>
