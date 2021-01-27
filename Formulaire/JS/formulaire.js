@@ -113,7 +113,7 @@ function KeyPress() // pour afficher le nombre de caracteres de la présentation
     total = document.getElementById("presentation").value.length;
     if (total < 10 || total > 15) {
       document.getElementById('errorpresentation').innerHTML = "Vous devez saisir une présentation (entre 10 et 15 caractères)";
-      return false;
+      return;
     } else {
       document.getElementById('errorpresentation').innerHTML = "";
     }
