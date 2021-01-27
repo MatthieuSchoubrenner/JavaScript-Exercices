@@ -1,6 +1,6 @@
-function test() 
+function caisse() 
 {
-  var nb1 = document.getElementById('aRegler').nodeValue;
+  var nb1 = document.getElementById('aRegler').value;
   var nb2 = document.getElementById('sommeRecu').value;
   var result;
 
