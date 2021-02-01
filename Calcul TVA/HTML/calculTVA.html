@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <title>Calcul TVA</title>
+</head>
+
+<body>
+  <form>
+    <label>Prix</label>
+    <div id="erreurPrix"></div>
+    <input type="text" name="prix" id="prix" onblur="calcul()">
+    <br>
+    <label>Type</label>
+    <div id="erreurType"></div>
+    <select id="type" onchange="calcul()">
+      <option value="">Choisissez un type de prix</option>
+      <option value="ht">HT</option>
+      <option value="ttc">TTC</option>
+    </select>
+    <br>
+    <label>Taux de TVA</label>
+    <div id="erreurTva"></div>
+    <select id="tva" onchange="calcul()">
+      <option value="">Choisissez un taux de tva</option>
+      <option value="10">10%</option>
+      <option value="20">20%</option>
+    </select>
+    <br><br>
+    <button type="button" id="btn" onclick="calculer()" style="display:none">Calculer le prix</button>
+  </form>
+  <div id="result"></div>
+  <script src="../JS/calculTVA.js"></script>
+</body>
+
+</html>

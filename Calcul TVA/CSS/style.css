@@ -1,0 +1,17 @@
+.error
+{
+  color:red;
+}
+
+.success
+{
+  color:green;
+}
+
+body {
+  background-color: rgb(131, 131, 131);
+}
+
+label {
+  color: aliceblue;
+}
