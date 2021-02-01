@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/stock.css">
+  <title>Gestion Stock</title>
+</head>
+<body>
+  <form>
+    <label>Nom du produit</label>
+    <div id="erreurproduit"></div>
+    <input type="text" name="produit" id="produit">
+    <br><br>
+    <div id="erreurquantite"></div>
+    <label>Quantité</label>
+    <div id="quantite"></div>
+    <input type="number" name="quantite" id="quantite">
+    <br><br>
+    <div id="erreurprix"></div>
+    <label>Prix</label>
+    <div id="prix"></div>
+    <input type="number" name="prix" id="prix">
+    <br><br>
+    <button type="button" id="btn" style="display: block">Afficher Stock</button>
+  </form>
+  <div id="montanttotalstock"></div>
+</body>
+</html>
