@@ -1,27 +1,51 @@
-function gestionstock() {
-  let nomproduit = document.getElementById('produit').value;
-  let quantite = document.getElementById('quantite').value;
-  let prix = document.getElementById('prix').value;
-  let montanttotalstock = 0;
+var produits = [];
+var stockT = 0;
 
-  if (nomproduit == '') {
-    document.getElementById('erreurproduit').innerHTML = 'Veuillez saisir un nom de produit';
-    document.getElementById('erreurproduit').classList.add('error');
-  } else {
-    document.getElementById('erreurproduit').innerHTML = "";
+function ajouter() {
+  var i;
+  var textProduit = '';
+  var newProduit = document.getElementById('produit').value;
+  var quantite = document.getElementById('quantite').value;
+  var prix = document.getElementById('prix').value;
+  var stock = quantite * prix;
+
+  if (!produits.includes(newProduit) && newProduit != '') {
+    stockT = stockT + stock;
   }
 
-  if (quantite == '') {
-    document.getElementById('erreurquantite').innerHTML = 'Veuillez saisir une quantité valide';
-    document.getElementById('erreurquantite').classList.add('error');
-  } else {
-    document.getElementById('erreurquantite').innerHTML = "";
+  if (newProduit != '' && quantite != '' && prix != '' && newProduit != produits.includes()) {
+    document.getElementById('erreurProduit').style.display = "none";
+    document.getElementById('erreurVide').style.display = 'none';
+
+    if (!produits.includes(newProduit)) {
+      produits.push(newProduit)
+    } else if (newProduit = produits.includes(newProduit)) {
+      document.getElementById('erreurProduit').style.display = "inline-block";
+    } else {
+      document.getElementById('erreurVide').style.display = "inline-block";
+    }
   }
 
-  if (prix == '') {
-    document.getElementById('erreurprix').innerHTML = 'Veuillez saisir un prix';
-    document.getElementById('erreurprix').classList.add('error');
-  } else {
-    document.getElementById('erreurprix').innerHTML = "";
+  produits.sort();
+  for (i = 0; i < produits.length; i++) {
+    textProduit += produits[i] + '<br>';
   }
+
+  if (newProduit = produits.includes(newProduit)) {
+    document.getElementById('erreurProduit').style.display = "inline-block";
+  } else {
+    document.getElementById('erreurProduit').style.display = "none";
+  }
+
+  if (newProduit == '') {
+    document.getElementById('erreurVide').style.display = "inline-block";
+  } else {
+    document.getElementById('erreurVide').style.display = "none";
+  }
+
+  document.getElementById('messageS').innerHTML = "La valeur totale de votre stock est de" + stockT +
+    "€<br>";
+  document.getElementById('messageP').innerHTML = 'Il y a' + produits.length +
+    'références dans votre inventaire :<br>';
+  document.getElementById('listeProduits').innerHTML = textProduit;
 }

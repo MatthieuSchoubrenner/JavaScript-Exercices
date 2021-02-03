@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../CSS/stock.css">
+  <script src="../JS/stock.js"></script>
   <title>Gestion Stock</title>
 </head>
+
 <body>
-  <form>
+  <div class="container">
     <label>Nom du produit</label>
-    <div id="erreurproduit"></div>
-    <input type="text" name="produit" id="produit">
-    <br><br>
-    <div id="erreurquantite"></div>
+    <span id="erreurProduit" style="color:red; display: none;">Ce produit est déjà
+      enregistré</span>
+    <span id="erreurVide" style="color:red; display: none;">Vous devez entrer une référence</span>
+    <input type="text" id="produit">
     <label>Quantité</label>
-    <div id="quantite"></div>
-    <input type="number" name="quantite" id="quantite">
-    <br><br>
-    <div id="erreurprix"></div>
+    <input type="number" id="quantite">
     <label>Prix</label>
-    <div id="prix"></div>
-    <input type="number" name="prix" id="prix">
-    <br><br>
-    <button type="button" id="btn" style="display: block">Afficher Stock</button>
-  </form>
-  <div id="montanttotalstock"></div>
+    <input type="number" id="prix">
+    <button type="button" onclick="ajouter()">Ajouter</button>
+    <div id="messageS"></div>
+    <div id="messageP"></div>
+    <div id="listeProduits"></div>
+  </div>
 </body>
+
 </html>
